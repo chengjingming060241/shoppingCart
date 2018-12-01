@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace对应的dao接口-->
+<mapper namespace="com.cheer.dao.userMapper">
+    <!-- id是方法名 #{id}是方法参数parameterType -->
+
+    <select id="getUserName" resultType="String">
+    select userName `name` from user where userName = #{userName}
+    </select>
+
+    <select id="getPassWord" resultType="String">
+    select passWord from user where userName = #{userName}
+    </select>
+
+    <select id="getUserNamePassWord" resultType="Map">
+    select userName,passWord from user userName = #{userName}
+    </select>
+
+    <update id="updatePassWord">
+       update user set passWord = #{newPassWord} where passWord = #{oldPassWord}
+    </update>
+
+    <insert id="addUser">
+        insert into user values(#{userId},#{userName},#{passWord})
+    </insert>
+
+</mapper>

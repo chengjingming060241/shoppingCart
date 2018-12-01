@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace对应的dao接口-->
+<mapper namespace="com.cheer.dao.iocationMapper">
+    <!-- id是方法名 #{id}是方法参数parameterType -->
+
+    <select id="getIocation" resultType="Iocation">
+    select * from iocation where iocationUserId = #{userId}
+    </select>
+
+    <select id="getAnyIocation" resultType="Iocation">
+    select * from iocation where iocationId = #{iocationId}
+    </select>
+
+    <update id="updateIocation" >
+    update iocation set iocation = #{iocation},iocationName = #{iocationName},iocationPhone = #{iocationPhone}
+    where iocationId = #{iocationId}
+    </update>
+
+    <update id="addIocation" parameterType="Iocation">
+    insert into iocation
+    values (iocationId = #{iocationId},iocation = #{iocation},iocationName = #{iocationName},iocationPhone = #{iocationPhone},iocationUserId = #{iocationUserId})
+    </update>
+
+    <delete id="deleteIocation">
+        delete from iocation where iocationId = #{iocationId}
+    </delete>
+
+
+</mapper>
