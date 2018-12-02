@@ -13,7 +13,7 @@ public class userRealize extends AbstractMapper {
 
     public static void main(String[] args) {
         userRealize userRealize = new userRealize();
-        userRealize.updatePassword();
+        userRealize.addID();
     }
 
     //登录的方法
@@ -25,6 +25,8 @@ public class userRealize extends AbstractMapper {
             String password = sc.next();
             if (name.equals(userMapper.getUserName(name))&& password.equals(userMapper.getPassWord(name))){
                 System.out.println("登录成功");
+                shoppingCart shoppingCart = new shoppingCart();
+                shoppingCart.shoppingGoods();
                 break;
 
             }else {
@@ -47,6 +49,7 @@ public class userRealize extends AbstractMapper {
         user.setPassWord(password);
         userMapper.addUser(user);
         System.out.println("注册成功！");
+        Login();
     }
 
     //修改密码的方法
@@ -65,6 +68,8 @@ public class userRealize extends AbstractMapper {
                     if(password1.equals(password2)){
                         userMapper.updatePassWord(password,password2);
                         System.out.println("密码修改成功");
+                        shoppingCart shoppingCart = new shoppingCart();
+                        shoppingCart.shoppingGoods();
                         break;
                     }else {
                         System.out.println("两次输入不一致，请重新输入，还有"+(j-1)+"次机会");
@@ -77,6 +82,7 @@ public class userRealize extends AbstractMapper {
         }
 
     }
+
 
 
 }

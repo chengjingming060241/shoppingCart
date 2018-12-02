@@ -9,7 +9,7 @@ public interface orderMapper {
     List<Order> getOrder(String goodsName);
 
     //查询所有订单
-    List<Order> getAllOrder(Integer orderUserId);
+    List<Order> getAllOrder(String userName);
 
     //添加订单
     void addOrder(Order order);

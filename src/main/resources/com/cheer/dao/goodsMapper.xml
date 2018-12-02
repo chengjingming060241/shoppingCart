@@ -7,11 +7,11 @@
     <!-- id是方法名 #{id}是方法参数parameterType -->
 
     <select id="getgoods" resultType="Goods">
-    select * from goods where name like #{goodsName}
+    select * from goods where goodsName like #{goodsName}
     </select>
 
     <select id="getGoodsPrice" resultType="Goods">
-        select * from goods where price &gt;#{priceMin} and price &lt; #{priceMax}
+        select * from goods where goodsPrice &gt;#{priceMin} and goodsPrice &lt; #{priceMax}
     </select>
 
     <select id="getAllGoods" resultType="Goods">

@@ -11,7 +11,7 @@
     </select>
 
     <select id="getAllOrder" resultType="Order">
-    select * from `order` where orderUserId = #{orderUserId}
+    select * from `order` where orderUserId = (select userId from user where userName = #{userName})
     </select>
 
     <insert id="addOrder" >

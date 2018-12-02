@@ -5,9 +5,9 @@ import com.cheer.model.Iocation;
 
 public class IocationMapperImpl extends AbstractMapper implements iocationMapper {
     @Override
-    public void getIocation(Integer userId) {
+    public void getIocation(String iocationUserName) {
         super.Before();
-        this.iocationMapper.getIocation(userId);
+        this.iocationMapper.getIocation(iocationUserName);
         super.After();
     }
 

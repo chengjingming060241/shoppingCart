@@ -1,9 +1,6 @@
 package com.cheer.util;
 
-import com.cheer.dao.goodsMapper;
-import com.cheer.dao.iocationMapper;
-import com.cheer.dao.orderMapper;
-import com.cheer.dao.userMapper;
+import com.cheer.dao.*;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -19,6 +16,7 @@ public abstract class AbstractMapper {
     goodsMapper goodsMapper = null;
     iocationMapper iocationMapper = null;
     orderMapper orderMapper = null;
+    ShopCartMapper shopCartMapper = null;
     public void Before(){
         try {
             //得到输入流
@@ -35,6 +33,8 @@ public abstract class AbstractMapper {
             iocationMapper = sqlSession.getMapper(iocationMapper.class);
             //得到订单对象
             orderMapper = sqlSession.getMapper(orderMapper.class);
+            //获取购物车对象
+            shopCartMapper = sqlSession.getMapper(ShopCartMapper.class);
 
         } catch (IOException e) {
             e.printStackTrace();

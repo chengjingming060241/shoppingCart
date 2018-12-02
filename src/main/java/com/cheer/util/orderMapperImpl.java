@@ -15,9 +15,9 @@ public class orderMapperImpl extends AbstractMapper implements orderMapper {
     }
 
     @Override
-    public List<Order> getAllOrder(Integer orderUserId) {
+    public List<Order> getAllOrder(String userName) {
         super.Before();
-        List<Order> orderList = this.orderMapper.getAllOrder(orderUserId);
+        List<Order> orderList = this.orderMapper.getAllOrder(userName);
         super.After();
         return orderList;
     }

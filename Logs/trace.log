@@ -96,3 +96,69 @@ TRACE [main] 2018-12-01 16:51:53 (BaseJdbcLogger.java:165) <==    Columns: goods
 TRACE [main] 2018-12-01 16:51:53 (BaseJdbcLogger.java:165) <==        Row: 1, iphone7, 5600.00, 100, 2017-08-25, Henan, China
 TRACE [main] 2018-12-01 16:51:53 (BaseJdbcLogger.java:165) <==        Row: 2, iphoneX, 7899.00, 100, 2018-09-01, Henan, China
 TRACE [main] 2018-12-01 16:51:53 (BaseJdbcLogger.java:165) <==        Row: 3, iphoneMAX, 8999.00, 100, 2018-09-01, Henan, China
+TRACE [main] 2018-12-01 22:46:33 (BaseJdbcLogger.java:165) <==    Columns: orderId, goodsName, goodsNumber, orderPrice, iocation, orderUserId, dateTime
+TRACE [main] 2018-12-01 22:46:33 (BaseJdbcLogger.java:165) <==        Row: 1, iphone7, 1, 5600.00, 昆山名仕大厦, 1, 2018-12-01 14:21:39.0
+TRACE [main] 2018-12-01 22:46:33 (BaseJdbcLogger.java:165) <==        Row: 2, iphoneX, 2, 8900.00, 昆山名仕大厦, 1, 2018-12-01 22:42:15.0
+TRACE [main] 2018-12-02 00:34:00 (BaseJdbcLogger.java:165) <==    Columns: goodsName, goodsNumber, goodsPrice, orderUserName
+TRACE [main] 2018-12-02 00:34:00 (BaseJdbcLogger.java:165) <==        Row: iphone7, 1, 5600.00, chengjingming
+TRACE [main] 2018-12-02 00:38:53 (BaseJdbcLogger.java:165) <==    Columns: goodsName, goodsNumber, goodsPrice, orderUserName
+TRACE [main] 2018-12-02 00:38:53 (BaseJdbcLogger.java:165) <==        Row: iphone7, 1, 5600.00, chengjingming
+TRACE [main] 2018-12-02 02:21:20 (BaseJdbcLogger.java:165) <==    Columns: goodsId, goodsName, goodsPrice, goodsNumber, date, local
+TRACE [main] 2018-12-02 02:21:20 (BaseJdbcLogger.java:165) <==        Row: 1, iphone7, 5600.00, 100, 2017-08-25, Henan, China
+TRACE [main] 2018-12-02 11:58:13 (BaseJdbcLogger.java:165) <==    Columns: name
+TRACE [main] 2018-12-02 11:58:13 (BaseJdbcLogger.java:165) <==        Row: chengjingming
+TRACE [main] 2018-12-02 11:58:13 (BaseJdbcLogger.java:165) <==    Columns: passWord
+TRACE [main] 2018-12-02 11:58:13 (BaseJdbcLogger.java:165) <==        Row: 123456
+TRACE [main] 2018-12-02 14:49:23 (BaseJdbcLogger.java:165) <==    Columns: name
+TRACE [main] 2018-12-02 14:49:23 (BaseJdbcLogger.java:165) <==        Row: chengjingming
+TRACE [main] 2018-12-02 14:49:24 (BaseJdbcLogger.java:165) <==    Columns: passWord
+TRACE [main] 2018-12-02 14:49:24 (BaseJdbcLogger.java:165) <==        Row: 123456
+TRACE [main] 2018-12-02 14:49:43 (BaseJdbcLogger.java:165) <==    Columns: goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-02 14:49:43 (BaseJdbcLogger.java:165) <==        Row: iphone7, 15, 5600.00, chengjingming
+TRACE [main] 2018-12-02 14:49:43 (BaseJdbcLogger.java:165) <==        Row: 屎蛋儿, 2333, 10.00, 南山敬老院
+TRACE [main] 2018-12-02 14:49:58 (BaseJdbcLogger.java:165) <==    Columns: goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-02 14:49:58 (BaseJdbcLogger.java:165) <==        Row: iphone7, 15, 5600.00, chengjingming
+TRACE [main] 2018-12-02 14:49:58 (BaseJdbcLogger.java:165) <==        Row: 屎蛋儿, 2333, 10.00, 南山敬老院
+TRACE [main] 2018-12-02 14:50:02 (BaseJdbcLogger.java:165) <==    Columns: goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-02 14:50:02 (BaseJdbcLogger.java:165) <==        Row: iphone7, 15, 5600.00, chengjingming
+TRACE [main] 2018-12-02 14:50:02 (BaseJdbcLogger.java:165) <==        Row: 屎蛋儿, 2333, 10.00, 南山敬老院
+TRACE [main] 2018-12-02 14:56:03 (BaseJdbcLogger.java:165) <==    Columns: name
+TRACE [main] 2018-12-02 14:56:03 (BaseJdbcLogger.java:165) <==        Row: chengjingming
+TRACE [main] 2018-12-02 14:56:03 (BaseJdbcLogger.java:165) <==    Columns: passWord
+TRACE [main] 2018-12-02 14:56:03 (BaseJdbcLogger.java:165) <==        Row: 123456
+TRACE [main] 2018-12-02 14:56:10 (BaseJdbcLogger.java:165) <==    Columns: goodsId, goodsName, goodsPrice, goodsNumber, date, local
+TRACE [main] 2018-12-02 14:56:10 (BaseJdbcLogger.java:165) <==        Row: 1, iphone7, 5600.00, 100, 2017-08-25, Henan, China
+TRACE [main] 2018-12-02 14:56:10 (BaseJdbcLogger.java:165) <==        Row: 2, iphoneX, 7899.00, 100, 2018-09-01, Henan, China
+TRACE [main] 2018-12-02 14:56:10 (BaseJdbcLogger.java:165) <==        Row: 3, iphoneMAX, 8999.00, 100, 2018-09-01, Henan, China
+TRACE [main] 2018-12-02 14:56:33 (BaseJdbcLogger.java:165) <==    Columns: goodsId, goodsName, goodsPrice, goodsNumber, date, local
+TRACE [main] 2018-12-02 14:56:33 (BaseJdbcLogger.java:165) <==        Row: 2, iphoneX, 7899.00, 100, 2018-09-01, Henan, China
+TRACE [main] 2018-12-02 15:18:49 (BaseJdbcLogger.java:165) <==    Columns: name
+TRACE [main] 2018-12-02 15:18:49 (BaseJdbcLogger.java:165) <==        Row: chengjingming
+TRACE [main] 2018-12-02 15:18:50 (BaseJdbcLogger.java:165) <==    Columns: passWord
+TRACE [main] 2018-12-02 15:18:50 (BaseJdbcLogger.java:165) <==        Row: 123456
+TRACE [main] 2018-12-02 15:19:18 (BaseJdbcLogger.java:165) <==    Columns: goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-02 15:19:18 (BaseJdbcLogger.java:165) <==        Row: iphone7, 15, 5600.00, chengjingming
+TRACE [main] 2018-12-02 15:19:18 (BaseJdbcLogger.java:165) <==        Row: 屎蛋儿, 2333, 10.00, 南山敬老院
+TRACE [main] 2018-12-02 15:20:49 (BaseJdbcLogger.java:165) <==    Columns: name
+TRACE [main] 2018-12-02 15:20:49 (BaseJdbcLogger.java:165) <==        Row: chengjingming
+TRACE [main] 2018-12-02 15:20:49 (BaseJdbcLogger.java:165) <==    Columns: passWord
+TRACE [main] 2018-12-02 15:20:49 (BaseJdbcLogger.java:165) <==        Row: 123456
+TRACE [main] 2018-12-02 15:20:58 (BaseJdbcLogger.java:165) <==    Columns: name
+TRACE [main] 2018-12-02 15:20:58 (BaseJdbcLogger.java:165) <==        Row: chengjingming
+TRACE [main] 2018-12-02 15:20:58 (BaseJdbcLogger.java:165) <==    Columns: passWord
+TRACE [main] 2018-12-02 15:20:58 (BaseJdbcLogger.java:165) <==        Row: 123456
+TRACE [main] 2018-12-02 15:55:53 (BaseJdbcLogger.java:165) <==    Columns: name
+TRACE [main] 2018-12-02 15:55:53 (BaseJdbcLogger.java:165) <==        Row: chengjingming
+TRACE [main] 2018-12-02 15:55:53 (BaseJdbcLogger.java:165) <==    Columns: passWord
+TRACE [main] 2018-12-02 15:55:53 (BaseJdbcLogger.java:165) <==        Row: 123456
+TRACE [main] 2018-12-02 15:59:13 (BaseJdbcLogger.java:165) <==    Columns: name
+TRACE [main] 2018-12-02 15:59:13 (BaseJdbcLogger.java:165) <==        Row: chengjingming
+TRACE [main] 2018-12-02 15:59:13 (BaseJdbcLogger.java:165) <==    Columns: passWord
+TRACE [main] 2018-12-02 15:59:13 (BaseJdbcLogger.java:165) <==        Row: 123456
+TRACE [main] 2018-12-02 15:59:26 (BaseJdbcLogger.java:165) <==    Columns: iocationId, iocation, iocationName, iocationPhone, UserName
+TRACE [main] 2018-12-02 15:59:26 (BaseJdbcLogger.java:165) <==        Row: 1, 昆山市玉山镇名仕大厦, 程井明, 15618816266, chengjingming
+TRACE [main] 2018-12-02 15:59:26 (BaseJdbcLogger.java:165) <==        Row: 2, 昆山千灯镇, 程井明, 15618816266, chengjingming
+TRACE [main] 2018-12-02 15:59:26 (BaseJdbcLogger.java:165) <==        Row: 3, 昆山市玉山镇名仕大厦, 大橙子, 15618816266, chengjingming
+TRACE [main] 2018-12-02 16:40:04 (BaseJdbcLogger.java:165) <==    Columns: name
+TRACE [main] 2018-12-02 16:40:04 (BaseJdbcLogger.java:165) <==        Row: chengjingming
+TRACE [main] 2018-12-02 16:40:04 (BaseJdbcLogger.java:165) <==        Row: chengjingming

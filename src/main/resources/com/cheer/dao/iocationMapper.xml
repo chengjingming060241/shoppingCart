@@ -7,7 +7,7 @@
     <!-- id是方法名 #{id}是方法参数parameterType -->
 
     <select id="getIocation" resultType="Iocation">
-    select * from iocation where iocationUserId = #{userId}
+    select * from iocation where UserName = #{UserName}
     </select>
 
     <select id="getAnyIocation" resultType="Iocation">
@@ -19,10 +19,9 @@
     where iocationId = #{iocationId}
     </update>
 
-    <update id="addIocation" parameterType="Iocation">
-    insert into iocation
-    values (iocationId = #{iocationId},iocation = #{iocation},iocationName = #{iocationName},iocationPhone = #{iocationPhone},iocationUserId = #{iocationUserId})
-    </update>
+    <insert id="addIocation" parameterType="iocation">
+    insert into iocation values(iocationId = null,iocation= #{iocation},iocationName= #{iocationName},iocationPhone= #{iocationPhone},UserName= #{UserName})
+     </insert>
 
     <delete id="deleteIocation">
         delete from iocation where iocationId = #{iocationId}

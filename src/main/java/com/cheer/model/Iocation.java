@@ -5,15 +5,7 @@ public class Iocation {
     private String iocation;
     private String iocationName;
     private String iocationPhone;
-    private int iocationUserId;
-
-    public int getIocationUserId() {
-        return iocationUserId;
-    }
-
-    public void setIocationUserId(int iocationUserId) {
-        this.iocationUserId = iocationUserId;
-    }
+    private String UserName;
 
     public int getIocationId() {
         return iocationId;
@@ -47,6 +39,14 @@ public class Iocation {
         this.iocationPhone = iocationPhone;
     }
 
+    public String getUserName() {
+        return UserName;
+    }
+
+    public void setUserName(String userName) {
+        UserName = userName;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Iocation{");
@@ -54,7 +54,7 @@ public class Iocation {
         sb.append(", iocation='").append(iocation).append('\'');
         sb.append(", iocationName='").append(iocationName).append('\'');
         sb.append(", iocationPhone='").append(iocationPhone).append('\'');
-        sb.append(", iocationUserId=").append(iocationUserId);
+        sb.append(", iocationUserName=").append(UserName);
         sb.append('}');
         return sb.toString();
     }

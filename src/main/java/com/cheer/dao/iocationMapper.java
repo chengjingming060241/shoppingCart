@@ -4,7 +4,7 @@ import com.cheer.model.Iocation;
 
 public interface iocationMapper {
     //查询用户所有地址
-    void getIocation(Integer userId);
+    void getIocation(String UserName);
 
     //查询用户单个地址
     void getAnyIocation(Integer iocationId);
