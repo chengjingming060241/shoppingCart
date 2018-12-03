@@ -59,8 +59,12 @@ public class ShopCart {
         sb.append(", goodsName='").append(goodsName).append('\'');
         sb.append(", goodsNumber=").append(goodsNumber);
         sb.append(", goodsPrice=").append(goodsPrice);
-        sb.append(", orderUserName='").append(UserName).append('\'');
+        sb.append(", UserName='").append(UserName).append('\'');
         sb.append('}');
         return sb.toString();
     }
+
+
+
+
 }

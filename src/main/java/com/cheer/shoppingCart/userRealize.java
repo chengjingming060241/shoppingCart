@@ -11,28 +11,24 @@ public class userRealize extends AbstractMapper {
     userMapperImpl userMapper = new userMapperImpl();
     Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        userRealize userRealize = new userRealize();
-        userRealize.addID();
-    }
-
     //登录的方法
-    public void Login(){
+    public User Login(){
+        User user = null;
         for (int i = 3; i >=1 ; i--) {
             System.out.println("请输入用户名：");
             String name = sc.next();
             System.out.println("请输入密码：");
             String password = sc.next();
-            if (name.equals(userMapper.getUserName(name))&& password.equals(userMapper.getPassWord(name))){
+            if (1 == userMapper.getCountUserNamePassWord(name,password)){
                 System.out.println("登录成功");
+                user = userMapper.getUserNamePassWord(name,password);
                 shoppingCart shoppingCart = new shoppingCart();
-                shoppingCart.shoppingGoods();
-                break;
-
+                shoppingCart.shoppingGoods(user);
             }else {
                 System.out.println("账号密码错误，还有"+(i-1)+"次机会请重新登录！");
             }
         }
+        return user;
     }
 
     //注册的方法
@@ -53,13 +49,13 @@ public class userRealize extends AbstractMapper {
     }
 
     //修改密码的方法
-    public void updatePassword(){
+    public void updatePassword(User user){
         for (int i = 3; i >=1 ; i--) {
-            System.out.println("请输入用户名：");
-            String name = sc.next();
+          //  System.out.println("请输入用户名：");
+          //  String name = sc.next();
             System.out.println("请输入旧密码：");
             String password = sc.next();
-            if (name.equals(userMapper.getUserName(name))&& password.equals(userMapper.getPassWord(name))){
+            if (user.getUserName().equals(userMapper.getUserName(user.getUserName()))&& password.equals(userMapper.getPassWord(user.getUserName()))){
                 for (int j = 3; j >=1 ; j--) {
                     System.out.println("请输入新密码");
                     String password1 = sc.next();
@@ -69,7 +65,7 @@ public class userRealize extends AbstractMapper {
                         userMapper.updatePassWord(password,password2);
                         System.out.println("密码修改成功");
                         shoppingCart shoppingCart = new shoppingCart();
-                        shoppingCart.shoppingGoods();
+                        shoppingCart.shoppingGoods(user);
                         break;
                     }else {
                         System.out.println("两次输入不一致，请重新输入，还有"+(j-1)+"次机会");

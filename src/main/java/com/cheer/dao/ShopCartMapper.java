@@ -13,8 +13,8 @@ public interface ShopCartMapper {
     //查看所有购物车商品
     List<ShopCart> getAllCartGoods();
 
-    //按商品名称查看购物车商品
-    List<ShopCart> getCartGoods(String goodsName);
+    //按商品名称查看一条购物车商品信息
+    ShopCart getCartAnyGoods(String goodsName);
 
     //修改已选商品数量
     void updateGoodsNumber(@Param("goodsName") String goodsName,@Param("goodsNumber") Integer goodsNumber );
@@ -27,5 +27,8 @@ public interface ShopCartMapper {
 
     //添加购物车
     void addCartGoods(ShopCart shopCart);
+
+    //按商品名获取价格
+    double getPrice(String goodsName);
 
 }

@@ -1,17 +1,19 @@
 package com.cheer.util;
 
 import com.cheer.dao.orderMapper;
+import com.cheer.model.Iocation;
 import com.cheer.model.Order;
+import com.cheer.model.User;
 
 import java.util.List;
 
 public class orderMapperImpl extends AbstractMapper implements orderMapper {
     @Override
-    public List<Order> getOrder(String goodsName) {
+    public Order getOrder(String goodsName) {
         super.Before();
-        List<Order> orderList = this.orderMapper.getOrder(goodsName);
+        Order order = this.orderMapper.getOrder(goodsName);
         super.Before();
-        return orderList;
+        return order;
     }
 
     @Override
@@ -30,9 +32,16 @@ public class orderMapperImpl extends AbstractMapper implements orderMapper {
     }
 
     @Override
-    public void deleteOrder(Integer orderId) {
+    public void deleteOrder(int orderId,String orderName) {
         super.Before();
-        this.orderMapper.deleteOrder(orderId);
+        this.orderMapper.deleteOrder(orderId,orderName);
         super.After();
+    }
+
+    @Override
+    public double getOrderPrice(String goodsName) {
+        super.Before();
+        double orderPrice = this.orderMapper.getOrderPrice(goodsName);
+        return 0;
     }
 }

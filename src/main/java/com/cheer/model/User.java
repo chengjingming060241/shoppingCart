@@ -4,6 +4,7 @@ public class User {
     private int userId;
     private String userName;
     private String passWord;
+    private double userMoney;
 
     public User(){}
 
@@ -31,12 +32,21 @@ public class User {
         this.passWord = passWord;
     }
 
+    public double getUserMoney() {
+        return userMoney;
+    }
+
+    public void setUserMoney(double userMoney) {
+        this.userMoney = userMoney;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("User{");
         sb.append("userId=").append(userId);
         sb.append(", userName='").append(userName).append('\'');
         sb.append(", passWord='").append(passWord).append('\'');
+        sb.append(", userMoney=").append(userMoney);
         sb.append('}');
         return sb.toString();
     }

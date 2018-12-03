@@ -3,9 +3,6 @@ package com.cheer.util;
 import com.cheer.dao.userMapper;
 import com.cheer.model.User;
 
-import java.util.List;
-import java.util.Map;
-
 public class userMapperImpl extends AbstractMapper implements userMapper {
 
 
@@ -26,11 +23,18 @@ public class userMapperImpl extends AbstractMapper implements userMapper {
     }
 
     @Override
-    public Map<String, Object> getUserNamePassWord(String userName) {
+    public User getUserNamePassWord(String userName, String passWord) {
         super.Before();
-        Map<String,Object>getUserNamePassWord = this.userMapper.getUserNamePassWord(userName);
+        User user = this.userMapper.getUserNamePassWord(userName,passWord);
         super.After();
-        return getUserNamePassWord;
+        return user;
+    }
+
+    @Override
+    public int getCountUserNamePassWord(String userName, String passWord) {
+        super.Before();
+        int num = this.userMapper.getCountUserNamePassWord(userName,passWord);
+        return num;
     }
 
     @Override
@@ -44,6 +48,21 @@ public class userMapperImpl extends AbstractMapper implements userMapper {
     public void addUser(User user) {
         super.Before();
         this.userMapper.addUser(user);
+        super.After();
+    }
+
+    @Override
+    public double getMoney(String userName) {
+        super.Before();
+        double userMoney = this.userMapper.getMoney(userName);
+        super.After();
+        return userMoney;
+    }
+
+    @Override
+    public void updateMoney(User user) {
+        super.Before();
+        this.userMapper.updateMoney(user);
         super.After();
     }
 }

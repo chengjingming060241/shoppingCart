@@ -7,9 +7,11 @@ public class Order {
     private String goodsName;
     private int goodsNumber;
     private double goodsPrice;
-    private String iocation;
+    private int iocationId;
     private int orderUserId;
     private Date dateTime;
+    private String userName;
+    private Iocation iocat;
 
     public int getOrderId() {
         return orderId;
@@ -43,12 +45,12 @@ public class Order {
         this.goodsPrice = goodsPrice;
     }
 
-    public String getIocation() {
-        return iocation;
+    public int getIocationId() {
+        return iocationId;
     }
 
-    public void setIocation(String iocation) {
-        this.iocation = iocation;
+    public void setIocationId(int iocationId) {
+        this.iocationId = iocationId;
     }
 
     public int getOrderUserId() {
@@ -59,12 +61,28 @@ public class Order {
         this.orderUserId = orderUserId;
     }
 
-    public Date getDate() {
+    public Date getDateTime() {
         return dateTime;
     }
 
-    public void setDate(Date dateTime) {
+    public void setDateTime(Date dateTime) {
         this.dateTime = dateTime;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public Iocation getIocat() {
+        return iocat;
+    }
+
+    public void setIocat(Iocation iocat) {
+        this.iocat = iocat;
     }
 
     @Override
@@ -74,9 +92,11 @@ public class Order {
         sb.append(", goodsName='").append(goodsName).append('\'');
         sb.append(", goodsNumber=").append(goodsNumber);
         sb.append(", goodsPrice=").append(goodsPrice);
-        sb.append(", iocation='").append(iocation).append('\'');
+        sb.append(", iocationId=").append(iocationId);
         sb.append(", orderUserId=").append(orderUserId);
-        sb.append(", date=").append(dateTime);
+        sb.append(", dateTime=").append(dateTime);
+        sb.append(", userName='").append(userName).append('\'');
+        sb.append(", iocat=").append(iocat);
         sb.append('}');
         return sb.toString();
     }

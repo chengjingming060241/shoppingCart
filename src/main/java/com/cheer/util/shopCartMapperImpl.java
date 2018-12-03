@@ -16,12 +16,13 @@ public class shopCartMapperImpl extends AbstractMapper implements ShopCartMapper
     }
 
     @Override
-    public List<ShopCart> getCartGoods(String goodsName) {
+    public ShopCart getCartAnyGoods(String goodsName) {
         super.Before();
-        List<ShopCart> shopCartList = this.shopCartMapper.getCartGoods(goodsName);
+        ShopCart shopCart = this.shopCartMapper.getCartAnyGoods(goodsName);
         super.After();
-        return shopCartList;
+        return shopCart;
     }
+
 
     @Override
     public void updateGoodsNumber(String goodsName,Integer goodsNumber) {
@@ -50,4 +51,13 @@ public class shopCartMapperImpl extends AbstractMapper implements ShopCartMapper
         this.shopCartMapper.addCartGoods(shopCart);
         super.After();
     }
+
+    @Override
+    public double getPrice(String goodsName) {
+        super.Before();
+        double goodsPrice = this.shopCartMapper.getPrice(goodsName);
+        return goodsPrice;
+    }
+
+
 }

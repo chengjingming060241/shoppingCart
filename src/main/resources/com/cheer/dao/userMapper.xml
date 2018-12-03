@@ -14,16 +14,28 @@
     select passWord from user where userName = #{userName}
     </select>
 
-    <select id="getUserNamePassWord" resultType="Map">
-    select userName,passWord from user userName = #{userName}
-    </select>
-
     <update id="updatePassWord">
-       update user set passWord = #{newPassWord} where passWord = #{oldPassWord}
+       update `user` set passWord = #{newPassWord} where passWord = #{oldPassWord}
     </update>
 
     <insert id="addUser">
-        insert into user values(#{userId},#{userName},#{passWord})
+        insert into `user` values(#{userId},#{userName},#{passWord},#{userMoney})
     </insert>
+
+    <select id="getMoney" resultType="Double">
+        select userMoney from `user` where userName = #{userName}
+    </select>
+
+    <update id="updateMoney">
+        update `user` set userMoney = #{userMoney} where userName = #{userName}
+    </update>
+
+    <select id="getUserNamePassWord" resultType="User">
+        select * from `user` where userName = #{userName} and passWord = #{passWord}
+    </select>
+
+    <select id="getCountUserNamePassWord" resultType="int">
+        select count(*) from `user` where userName = #{userName} and passWord = #{passWord}
+    </select>
 
 </mapper>

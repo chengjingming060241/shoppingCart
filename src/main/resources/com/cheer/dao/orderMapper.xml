@@ -7,20 +7,47 @@
     <!-- id是方法名 #{id}是方法参数parameterType -->
 
     <select id="getOrder" resultType="Order">
-   select * from `order`where goodsName = #{goodsName}
+   select * from `order` where goodsName = #{goodsName}
     </select>
 
-    <select id="getAllOrder" resultType="Order">
-    select * from `order` where orderUserId = (select userId from user where userName = #{userName})
+    <select id="getAllOrder" resultMap="orderResult">
+ 	SELECT
+		`order`.orderId AS orderId,
+		`order`.orderUserName AS orderUserName,
+		`order`.goodsName AS goodsName,
+		`order`.orderPrice AS orderPrice,
+		`order`.goodsNumber AS goodsNumber,
+		`order`.dateTime AS dateTime,
+		iocation.iocationName AS iocationName,
+		iocation.iocationPhone AS iocationPhone,
+		iocation.iocation AS iocation
+	FROM
+		`order`
+		JOIN iocation ON ( `order`.iocationId = iocation.iocationId )
+	WHERE
+		orderUserName = #{userName}
+		AND iocation.iocationId = `order`.iocationId
     </select>
+
+    <resultMap id="orderResult" type="Iocation">
+        <association property="iocation" resultMap="iocationResult"></association>
+    </resultMap>
+
+    <resultMap id="iocationResult" type="Iocation">
+        <result property= "iocationId" column="iocationId"></result>
+    </resultMap>
 
     <insert id="addOrder" >
-        insert into `order` values (#{orderId},#{goodsName},#{goodsNumber},#{goodsPrice},#{iocation},#{orderUserId},#{dateTime})
+        insert into `order` values (#{orderId},#{goodsName},#{goodsNumber},#{goodsPrice},#{iocation},#{orderUserId},#{dateTime},#{userName})
     </insert>
 
     <delete id="deleteOrder">
-        delete from `order` where orderId = #{orderId}
+        delete from `order` where orderUserName = #{userName} and orderId = #{orderId}
     </delete>
+
+    <select id="getOrderPrice" resultMap="Double">
+        select goodsPrice*goodsNumber from order where goodsNaame = #{goodsName}
+    </select>
 
 
 </mapper>

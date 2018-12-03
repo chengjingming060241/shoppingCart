@@ -7,29 +7,33 @@
     <!-- id是方法名 #{id}是方法参数parameterType -->
 
     <select id="getAllCartGoods" resultType="ShopCart">
-   select goodsName,goodsNumber,goodsPrice,userName from shopCart
+   select goodsName,goodsNumber,goodsPrice,userName from shopcart
     </select>
 
-    <select id="getCartGoods" resultType="ShopCart">
-   select goodsName,goodsNumber,goodsPrice,userName from shopCart where goodsName = #{goodsName}
+    <select id="getCartAnyGoods" resultType="ShopCart">
+   select * from shopcart where goodsName = #{goodsName}
     </select>
 
     <update id="updateGoodsNumber">
-   update purchasegoods set goodsNumber = #{goodsNumber} WHERE goodsName = #{goodsName}
+   update shopcart set goodsNumber = #{goodsNumber} WHERE goodsName = #{goodsName}
     </update>
 
     <delete id="deleteGoods">
-   DELETE from purchasegoods where goodsName = #{goodsName}
+   DELETE from shopcart where goodsName = #{goodsName}
     </delete>
 
     <delete id="deleteAllGoods">
-   truncate table purchasegoods
+   truncate table shopcart
     </delete>
 
     <insert id="addCartGoods" >
         insert into shopcart
-        values(shopId =#{shopId},goodsName = #{goodsName},goodsNumber = #{goodsNumber},goodsPrice = #{goodsPrice},UserName = #{UserName} )
+        values(#{shopId},#{goodsName},#{goodsNumber},#{goodsPrice},#{UserName} )
     </insert>
+    
+    <select id="getPrice" resultType= "Double">
+       select goodsNumber*goodsPrice from shopcart where goodsName = #{goodsName}
+    </select>
 
 
 

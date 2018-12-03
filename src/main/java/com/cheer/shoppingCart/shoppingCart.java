@@ -1,5 +1,7 @@
 package com.cheer.shoppingCart;
 
+import com.cheer.model.User;
+
 import java.util.Scanner;
 
 public class shoppingCart {
@@ -30,28 +32,27 @@ public class shoppingCart {
             case 1 :
                 userRealize.Login();
                 break;
-
             case 2:
                 userRealize.addID();
         }
     }
 
     //主界面
-    public void shoppingGoods(){
+    public void shoppingGoods(User user){
         System.out.println("1、商品 \t 2、购物车 \t 3、订单 \t 4、地址 \t 5、修改密码");
         switch (sc.nextInt()){
             case 1:
-                goodsRealize.shoppingGoods();
+                goodsRealize.shoppingGoods(user);
                 break;
             case 2:
-                ShopCartRealize.shoppingCart();
+                ShopCartRealize.shoppingCart(user);
                 break;
             case 3:
-                orderRealoze.userOrder();
+                orderRealoze.userOrder(user);
             case 4:
-                iocationRealize.shoppingIocation();
+                iocationRealize.shoppingIocation(user);
             case 5:
-                userRealize.updatePassword();
+                userRealize.updatePassword(user);
         }
     }
 

@@ -10,8 +10,8 @@
     select * from iocation where UserName = #{UserName}
     </select>
 
-    <select id="getAnyIocation" resultType="Iocation">
-    select * from iocation where iocationId = #{iocationId}
+    <select id="getAnyIocation" resultType="String">
+    select * from iocation where iocationId = #{iocationId} and UserName = #{userName}
     </select>
 
     <update id="updateIocation" >
@@ -19,8 +19,8 @@
     where iocationId = #{iocationId}
     </update>
 
-    <insert id="addIocation" parameterType="iocation">
-    insert into iocation values(iocationId = null,iocation= #{iocation},iocationName= #{iocationName},iocationPhone= #{iocationPhone},UserName= #{UserName})
+    <insert id="addIocation" >
+    insert into iocation (iocation,iocationName,iocationPhone,UserName)values(#{iocation},#{iocationName},#{iocationPhone},#{UserName})
      </insert>
 
     <delete id="deleteIocation">

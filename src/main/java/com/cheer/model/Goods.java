@@ -4,21 +4,11 @@ import java.util.Date;
 
 public class Goods {
     private int goodsId;
-    private String name;
-    private double price;
+    private String goodsName;
+    private double goodsPrice;
+    private int goodsNumber;
     private Date date;
     private String local;
-    private int stock;
-
-    public Goods() { }
-
-    public int getStock() {
-        return stock;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
 
     public int getGoodsId() {
         return goodsId;
@@ -28,20 +18,28 @@ public class Goods {
         this.goodsId = goodsId;
     }
 
-    public String getName() {
-        return name;
+    public String getGoodsName() {
+        return goodsName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setGoodsName(String goodsName) {
+        this.goodsName = goodsName;
     }
 
-    public double getPrice() {
-        return price;
+    public double getGoodsPrice() {
+        return goodsPrice;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setGoodsPrice(double goodsPrice) {
+        this.goodsPrice = goodsPrice;
+    }
+
+    public int getGoodsNumber() {
+        return goodsNumber;
+    }
+
+    public void setGoodsNumber(int goodsNumber) {
+        this.goodsNumber = goodsNumber;
     }
 
     public Date getDate() {
@@ -64,11 +62,11 @@ public class Goods {
     public String toString() {
         final StringBuilder sb = new StringBuilder("Goods{");
         sb.append("goodsId=").append(goodsId);
-        sb.append(", name='").append(name).append('\'');
-        sb.append(", price=").append(price);
+        sb.append(", goodsName='").append(goodsName).append('\'');
+        sb.append(", goodsPrice=").append(goodsPrice);
+        sb.append(", goodsNumber=").append(goodsNumber);
         sb.append(", date=").append(date);
         sb.append(", local='").append(local).append('\'');
-        sb.append(", stock=").append(stock);
         sb.append('}');
         return sb.toString();
     }

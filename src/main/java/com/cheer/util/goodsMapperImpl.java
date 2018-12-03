@@ -30,5 +30,20 @@ public class goodsMapperImpl extends AbstractMapper implements goodsMapper {
         return goodsListAll;
     }
 
+    @Override
+    public Goods getAnyGoods(String goodsName) {
+        super.Before();
+        Goods goods = this.goodsMapper.getAnyGoods(goodsName);
+        super.After();
+        return goods;
+    }
+
+    @Override
+    public void updateGoodsNumber(int goodsNumber ,String goodsName) {
+        super.Before();
+        this.goodsMapper.updateGoodsNumber(goodsNumber,goodsName);
+        super.After();
+    }
+
 
 }

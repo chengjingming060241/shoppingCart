@@ -3,19 +3,23 @@ package com.cheer.util;
 import com.cheer.dao.iocationMapper;
 import com.cheer.model.Iocation;
 
+import java.util.List;
+
 public class IocationMapperImpl extends AbstractMapper implements iocationMapper {
     @Override
-    public void getIocation(String iocationUserName) {
+    public List<Iocation> getIocation(String iocationUserName) {
         super.Before();
-        this.iocationMapper.getIocation(iocationUserName);
+        List<Iocation> iocationList = this.iocationMapper.getIocation(iocationUserName);
         super.After();
+        return iocationList;
     }
 
     @Override
-    public void getAnyIocation(Integer iocationId) {
+    public Iocation getAnyIocation(Integer iocationId , String userName) {
         super.Before();
-        this.iocationMapper.getAnyIocation(iocationId);
+        Iocation iocation = this.iocationMapper.getAnyIocation(iocationId,userName);
         super.After();
+        return iocation;
     }
 
     @Override

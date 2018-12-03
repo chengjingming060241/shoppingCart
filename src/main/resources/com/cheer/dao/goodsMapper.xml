@@ -18,4 +18,12 @@
         select * from goods
     </select>
 
+    <select id="getAnyGoods" resultType="Goods">
+        select * from goods where goodsName = #{goodsName}
+    </select>
+
+    <update id="updateGoodsNumber">
+        update goods set goodsNumber = #{goodsNumber} where goodsName = #{goodsName}
+    </update>
+
 </mapper>
