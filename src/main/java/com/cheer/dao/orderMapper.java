@@ -11,7 +11,7 @@ public interface orderMapper {
     Order getOrder(String goodsName);
 
     //查询所有订单
-    List<Order> getAllOrder(@Param("userName") String userName);
+    List<Order> getAllOrder(@Param("orderUserName") String orderUserName);
 
     //添加订单
     void addOrder(Order order);

@@ -13,10 +13,15 @@ import java.util.UUID;
  */
 public class ShopCartRealize {
     Scanner sc = new Scanner(System.in);
+    //购物车实现对象
     shopCartMapperImpl purchaseGoodsMapper = new shopCartMapperImpl();
+    //用户对象
     userMapperImpl userMapper = new userMapperImpl();
+    //购物车对象
     ShopCart shopCart = new ShopCart();
+    //商品实现对象
     goodsMapperImpl goodsMapper = new goodsMapperImpl();
+    //订单实现对象
     orderRealoze orderRealoze = new orderRealoze();
 
     //查询所有购物车商品
@@ -25,10 +30,10 @@ public class ShopCartRealize {
         for (ShopCart cartGoods: shopCartList) {
             System.out.println(cartGoods);
         }
-        System.out.println("返回上一级请按“0”，直接购买请按“1”，添加订单请按“2”");
+        System.out.println("返回上一级请按“0”，直接购买请按“1”，下单请按“2”");
         switch (sc.nextInt()){
             case 1:
-                pay(user);
+               pay(user);
                 break;
             case 2:
                 orderRealoze.addOrder(user);
@@ -116,18 +121,18 @@ public class ShopCartRealize {
         Goods goods = this.goodsMapper.getAnyGoods(goodsName);
         //添加ID
         int num = UUID();
-        shopCart.setShopId(num);
+        this.shopCart.setShopId(num);
         //添加商品名称
-        shopCart.setGoodsName(goods.getGoodsName());
+        this.shopCart.setGoodsName(goods.getGoodsName());
         //添加商品价格
-        shopCart.setGoodsPrice(goods.getGoodsPrice());
+        this.shopCart.setGoodsPrice(goods.getGoodsPrice());
         //添加商品数量
-        shopCart.setGoodsNumber(goodsNumber);
+        this.shopCart.setGoodsNumber(goodsNumber);
         //获取用户名称
-        shopCart.setUserName(user.getUserName());
+        this.shopCart.setUserName(user.getUserName());
         //按商品名称获取购物车商品信息
         ShopCart shopCart1 = this.purchaseGoodsMapper.getCartAnyGoods(goodsName);
-        if(shopCart1 !=null){
+        if(null!=shopCart1){
             if(goodsName.equals(shopCart1.getGoodsName()) ){
                 //购买相同商品时，修改商品数量
                 int goodaName1 = goodsNumber + shopCart1.getGoodsNumber();

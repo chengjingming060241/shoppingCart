@@ -34,6 +34,7 @@ public class userMapperImpl extends AbstractMapper implements userMapper {
     public int getCountUserNamePassWord(String userName, String passWord) {
         super.Before();
         int num = this.userMapper.getCountUserNamePassWord(userName,passWord);
+        super.After();
         return num;
     }
 

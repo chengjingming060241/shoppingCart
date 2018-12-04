@@ -25,7 +25,7 @@
 		`order`
 		JOIN iocation ON ( `order`.iocationId = iocation.iocationId )
 	WHERE
-		orderUserName = #{userName}
+		orderUserName = #{orderUserName}
 		AND iocation.iocationId = `order`.iocationId
     </select>
 
@@ -38,15 +38,15 @@
     </resultMap>
 
     <insert id="addOrder" >
-        insert into `order` values (#{orderId},#{goodsName},#{goodsNumber},#{goodsPrice},#{iocation},#{orderUserId},#{dateTime},#{userName})
+        insert into `order` values (#{orderId},#{goodsName},#{goodsNumber},#{goodsPrice},#{iocationId},#{dateTime},#{orderUserName})
     </insert>
 
     <delete id="deleteOrder">
-        delete from `order` where orderUserName = #{userName} and orderId = #{orderId}
+        delete from `order` where orderUserName = #{orderUserName} and orderId = #{orderId}
     </delete>
 
-    <select id="getOrderPrice" resultMap="Double">
-        select goodsPrice*goodsNumber from order where goodsNaame = #{goodsName}
+    <select id="getOrderPrice" resultType="Double" >
+        select orderPrice*goodsNumber from `order` where goodsName = #{goodsName}
     </select>
 
 

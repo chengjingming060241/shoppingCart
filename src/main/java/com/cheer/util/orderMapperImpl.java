@@ -17,9 +17,9 @@ public class orderMapperImpl extends AbstractMapper implements orderMapper {
     }
 
     @Override
-    public List<Order> getAllOrder(String userName) {
+    public List<Order> getAllOrder(String orderUserName) {
         super.Before();
-        List<Order> orderList = this.orderMapper.getAllOrder(userName);
+        List<Order> orderList = this.orderMapper.getAllOrder(orderUserName);
         super.After();
         return orderList;
     }
@@ -42,6 +42,6 @@ public class orderMapperImpl extends AbstractMapper implements orderMapper {
     public double getOrderPrice(String goodsName) {
         super.Before();
         double orderPrice = this.orderMapper.getOrderPrice(goodsName);
-        return 0;
+        return orderPrice;
     }
 }

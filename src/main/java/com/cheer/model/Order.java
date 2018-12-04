@@ -8,9 +8,8 @@ public class Order {
     private int goodsNumber;
     private double goodsPrice;
     private int iocationId;
-    private int orderUserId;
     private Date dateTime;
-    private String userName;
+    private String orderUserName;
     private Iocation iocat;
 
     public int getOrderId() {
@@ -53,14 +52,6 @@ public class Order {
         this.iocationId = iocationId;
     }
 
-    public int getOrderUserId() {
-        return orderUserId;
-    }
-
-    public void setOrderUserId(int orderUserId) {
-        this.orderUserId = orderUserId;
-    }
-
     public Date getDateTime() {
         return dateTime;
     }
@@ -69,12 +60,12 @@ public class Order {
         this.dateTime = dateTime;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getOrderUserName() {
+        return orderUserName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setOrderUserName(String orderUserName) {
+        this.orderUserName = orderUserName;
     }
 
     public Iocation getIocat() {
@@ -93,9 +84,8 @@ public class Order {
         sb.append(", goodsNumber=").append(goodsNumber);
         sb.append(", goodsPrice=").append(goodsPrice);
         sb.append(", iocationId=").append(iocationId);
-        sb.append(", orderUserId=").append(orderUserId);
         sb.append(", dateTime=").append(dateTime);
-        sb.append(", userName='").append(userName).append('\'');
+        sb.append(", orderUserName='").append(orderUserName).append('\'');
         sb.append(", iocat=").append(iocat);
         sb.append('}');
         return sb.toString();

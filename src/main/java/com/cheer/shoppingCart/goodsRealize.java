@@ -8,7 +8,9 @@ import java.util.Scanner;
 
 public class goodsRealize {
     Scanner sc = new Scanner(System.in);
+    //获取商品实现对象
     goodsMapperImpl goodsMapper = new goodsMapperImpl();
+    //获取购物车实现对象
     ShopCartRealize shopCartRealize = new ShopCartRealize();
 
     //根据商品名称搜索商品
@@ -19,7 +21,7 @@ public class goodsRealize {
         System.out.println("返回上一级请按“0”，购买请按“1”");
         switch (sc.nextInt()){
             case 1:
-                shopCartRealize.shopping(user);
+                this.shopCartRealize.shopping(user);
                 break;
             case 2:
                 //返回上一级
