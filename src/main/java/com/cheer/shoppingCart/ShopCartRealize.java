@@ -240,24 +240,34 @@ public class ShopCartRealize {
     //购物车界面
     public void shoppingCart(User user){
         shoppingCart shoppingCart = new shoppingCart();
+        for (int i = 0; i <1 ; i++) {
             System.out.println("1、查看购物车商品  \t 2、修改商品数量 \t 3、删除购物车商品 \t 4、清空购物车 \t 0、返回上一级");
-            switch (sc.nextInt()){
-                case 1:
-                    getAllCartGoods(user);
-                    break;
-                case 2:
-                    updateCartGoodsNumber(user);
-                    break;
-                case 3:
-                    deleteCartGoods(user);
-                    break;
-                case 4:
-                    deleteAllGoods(user);
-                    break;
-                case 0:
-                    shoppingCart.shoppingGoods(user);
-                    break;
+            String num = sc.next();
+            if (num.matches("[0-4]")){
+                switch (num){
+                    case "1":
+                        getAllCartGoods(user);
+                        break;
+                    case "2":
+                        updateCartGoodsNumber(user);
+                        break;
+                    case "3":
+                        deleteCartGoods(user);
+                        break;
+                    case "4":
+                        deleteAllGoods(user);
+                        break;
+                    case "0":
+                        shoppingCart.shoppingGoods(user);
+                        break;
+                }
+            }else {
+                System.out.println("0·4选择相应功能");
+                i--;
             }
+        }
+
+
     }
 
     //返回购物车界面的方法

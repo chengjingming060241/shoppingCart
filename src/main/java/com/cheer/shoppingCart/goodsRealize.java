@@ -58,30 +58,39 @@ public class goodsRealize {
             case 1:
                 shopCartRealize.shopping(user);
                 break;
-            case 2:
-                //返回上一级
-                back(user);
+            case 0:
+               shoppingGoods(user);
         }
     }
 
     //商品界面
     public void shoppingGoods(User user) {
         shoppingCart shoppingCart = new shoppingCart();
-        System.out.println("1、浏览全部商品 \t 2、按价格查询商品 \t 3、搜索商品名称 \t 4、返回上一级请按0 ");
-        switch (sc.nextInt()) {
-            case 1:
-                getAllGoods(user);
-                break;
-            case 2:
-                searchGoodsPrice(user);
-                break;
-            case 3:
-                searchGoodsName(user);
-                break;
-            case 0:
-                shoppingCart.shoppingGoods(user);
-                break;
+        for (int i = 0; i <1 ; i++) {
+            System.out.println("1、浏览全部商品 \t 2、按价格查询商品 \t 3、搜索商品名称 \t 4、返回上一级请按0 ");
+            String num = sc.next();
+            if (num.matches("[0-4]")){
+                switch (num) {
+                    case "1":
+                        getAllGoods(user);
+                        break;
+                    case "2":
+                        searchGoodsPrice(user);
+                        break;
+                    case "3":
+                        searchGoodsName(user);
+                        break;
+                    case "0":
+                        shoppingCart.shoppingGoods(user);
+                        break;
+                }
+            }else {
+                System.out.println("0·4选择功能！");
+                i--;
+            }
         }
+
+
     }
 
     //返回商品界面的方法

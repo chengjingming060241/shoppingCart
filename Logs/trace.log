@@ -2093,3 +2093,84 @@ TRACE [main] 2018-12-05 16:45:38 (BaseJdbcLogger.java:165) <==        Row: 16334
 TRACE [main] 2018-12-05 16:45:38 (BaseJdbcLogger.java:165) <==        Row: 1941879276, chengjingming, 小米1, 999.00, 2, 2018-12-04 23:06:38.0, 已付款, 程井明, 15618816266, 昆山千灯镇
 TRACE [main] 2018-12-05 16:45:38 (BaseJdbcLogger.java:165) <==        Row: 1954964382, chengjingming, 三星S9, 3699.00, 1, 2018-12-05 15:34:09.0, 取消订单, 程井明, 15618816266, 昆山市玉山镇名仕大厦
 TRACE [main] 2018-12-05 16:45:38 (BaseJdbcLogger.java:165) <==        Row: 2009578443, chengjingming, 红米1, 799.00, 1, 2018-12-05 15:26:31.0, 已退货, 程井明, 15618816266, 昆山市玉山镇名仕大厦
+TRACE [main] 2018-12-05 22:47:19 (BaseJdbcLogger.java:165) <==    Columns: count(*)
+TRACE [main] 2018-12-05 22:47:19 (BaseJdbcLogger.java:165) <==        Row: 1
+TRACE [main] 2018-12-05 22:47:20 (BaseJdbcLogger.java:165) <==    Columns: userId, userName, passWord, userMoney
+TRACE [main] 2018-12-05 22:47:20 (BaseJdbcLogger.java:165) <==        Row: 526381897, chengjingming123, cjm123456, 0.00
+TRACE [main] 2018-12-05 22:47:42 (BaseJdbcLogger.java:165) <==    Columns: goodsId, goodsName, goodsPrice, goodsNumber, date, local
+TRACE [main] 2018-12-05 22:47:42 (BaseJdbcLogger.java:165) <==        Row: 1, 小米1, 999.00, 30, 2018-05-06, Foxconn, Henan, China
+TRACE [main] 2018-12-05 22:47:42 (BaseJdbcLogger.java:165) <==        Row: 2, 小米2, 1299.00, 50, 2018-12-04, Foxconn, Henan, China
+TRACE [main] 2018-12-05 22:47:42 (BaseJdbcLogger.java:165) <==        Row: 3, 小米note, 1999.00, 30, 2018-09-19, Foxconn, Henan, China
+TRACE [main] 2018-12-05 22:47:42 (BaseJdbcLogger.java:165) <==        Row: 4, 红米1, 799.00, 30, 2018-12-04, Foxconn, Henan, China
+TRACE [main] 2018-12-05 22:47:42 (BaseJdbcLogger.java:165) <==        Row: 5, 三星S9, 3699.00, 20, 2018-07-25, 
+
+Samsung plant in China
+
+TRACE [main] 2018-12-05 22:47:42 (BaseJdbcLogger.java:165) <==        Row: 6, 三星note9, 6999.00, 20, 2018-12-04, 
+
+Samsung plant in China
+
+TRACE [main] 2018-12-05 22:47:42 (BaseJdbcLogger.java:165) <==        Row: 7, iphoneX, 6899.00, 20, 2018-12-04, Foxconn Shenzhen, China
+TRACE [main] 2018-12-05 22:47:42 (BaseJdbcLogger.java:165) <==        Row: 8, iphoneMax, 8999.00, 20, 2018-12-04, Foxconn Shenzhen, China
+TRACE [main] 2018-12-05 22:47:42 (BaseJdbcLogger.java:165) <==        Row: 9, phoneXMax, 9999.00, 20, 2018-12-04, Foxconn Shenzhen, China
+TRACE [main] 2018-12-05 22:48:12 (BaseJdbcLogger.java:165) <==    Columns: goodsId, goodsName, goodsPrice, goodsNumber, date, local
+TRACE [main] 2018-12-05 22:48:12 (BaseJdbcLogger.java:165) <==        Row: 1, 小米1, 999.00, 30, 2018-05-06, Foxconn, Henan, China
+TRACE [main] 2018-12-05 22:48:26 (BaseJdbcLogger.java:165) <==    Columns: goodsId, goodsName, goodsPrice, goodsNumber, date, local
+TRACE [main] 2018-12-05 22:48:26 (BaseJdbcLogger.java:165) <==        Row: 2, 小米2, 1299.00, 50, 2018-12-04, Foxconn, Henan, China
+TRACE [main] 2018-12-05 22:48:42 (BaseJdbcLogger.java:165) <==    Columns: goodsId, goodsName, goodsPrice, goodsNumber, date, local
+TRACE [main] 2018-12-05 22:48:42 (BaseJdbcLogger.java:165) <==        Row: 5, 三星S9, 3699.00, 20, 2018-07-25, 
+
+Samsung plant in China
+
+TRACE [main] 2018-12-05 22:48:54 (BaseJdbcLogger.java:165) <==    Columns: shopId, goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-05 22:48:54 (BaseJdbcLogger.java:165) <==        Row: 52490207, 三星S9, 1, 3699.00, chengjingming123
+TRACE [main] 2018-12-05 22:48:54 (BaseJdbcLogger.java:165) <==        Row: 1701953877, 小米2, 2, 1299.00, chengjingming123
+TRACE [main] 2018-12-05 22:48:54 (BaseJdbcLogger.java:165) <==        Row: 1767050584, 小米1, 2, 999.00, chengjingming123
+TRACE [main] 2018-12-05 22:51:06 (BaseJdbcLogger.java:165) <==    Columns: shopId, goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-05 22:51:06 (BaseJdbcLogger.java:165) <==        Row: 52490207, 三星S9, 1, 3699.00, chengjingming123
+TRACE [main] 2018-12-05 22:51:22 (BaseJdbcLogger.java:165) <==    Columns: orderId, orderUserName, goodsName, orderPrice, goodsNumber, dateTime, orderState, iocationName, iocationPhone, iocation
+TRACE [main] 2018-12-05 22:51:22 (BaseJdbcLogger.java:165) <==        Row: 1876716114, chengjingming123, 三星S9, 3699.00, 1, 2018-12-05 22:51:06.0, 未支付, 程井明, 15618816266, 昆山市玉山镇名仕大厦
+TRACE [main] 2018-12-05 22:53:25 (BaseJdbcLogger.java:165) <==    Columns: orderId, orderUserName, goodsName, orderPrice, goodsNumber, dateTime, orderState, iocationName, iocationPhone, iocation
+TRACE [main] 2018-12-05 22:53:25 (BaseJdbcLogger.java:165) <==        Row: 1876716114, chengjingming123, 三星S9, 3699.00, 1, 2018-12-05 22:51:06.0, 未支付, 程井明, 15618816266, 昆山市玉山镇名仕大厦
+TRACE [main] 2018-12-05 22:53:43 (BaseJdbcLogger.java:165) <==    Columns: shopId, goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-05 22:53:43 (BaseJdbcLogger.java:165) <==        Row: 1701953877, 小米2, 2, 1299.00, chengjingming123
+TRACE [main] 2018-12-05 22:53:43 (BaseJdbcLogger.java:165) <==        Row: 1767050584, 小米1, 2, 999.00, chengjingming123
+TRACE [main] 2018-12-05 22:54:00 (BaseJdbcLogger.java:165) <==    Columns: shopId, goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-05 22:54:00 (BaseJdbcLogger.java:165) <==        Row: 1767050584, 小米1, 2, 999.00, chengjingming123
+TRACE [main] 2018-12-05 22:54:00 (BaseJdbcLogger.java:165) <==    Columns: goodsNumber*goodsPrice
+TRACE [main] 2018-12-05 22:54:00 (BaseJdbcLogger.java:165) <==        Row: 1998.00
+TRACE [main] 2018-12-05 22:57:10 (BaseJdbcLogger.java:165) <==    Columns: userMoney
+TRACE [main] 2018-12-05 22:57:10 (BaseJdbcLogger.java:165) <==        Row: 0.00
+TRACE [main] 2018-12-05 22:57:18 (BaseJdbcLogger.java:165) <==    Columns: shopId, goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-05 22:57:18 (BaseJdbcLogger.java:165) <==        Row: 1701953877, 小米2, 2, 1299.00, chengjingming123
+TRACE [main] 2018-12-05 22:57:18 (BaseJdbcLogger.java:165) <==        Row: 1767050584, 小米1, 2, 999.00, chengjingming123
+TRACE [main] 2018-12-05 22:57:31 (BaseJdbcLogger.java:165) <==    Columns: shopId, goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-05 22:57:31 (BaseJdbcLogger.java:165) <==        Row: 1767050584, 小米1, 2, 999.00, chengjingming123
+TRACE [main] 2018-12-05 22:57:32 (BaseJdbcLogger.java:165) <==    Columns: goodsNumber*goodsPrice
+TRACE [main] 2018-12-05 22:57:32 (BaseJdbcLogger.java:165) <==        Row: 1998.00
+TRACE [main] 2018-12-05 22:57:32 (BaseJdbcLogger.java:165) <==    Columns: goodsId, goodsName, goodsPrice, goodsNumber, date, local
+TRACE [main] 2018-12-05 22:57:32 (BaseJdbcLogger.java:165) <==        Row: 1, 小米1, 999.00, 30, 2018-05-06, Foxconn, Henan, China
+TRACE [main] 2018-12-05 22:57:32 (BaseJdbcLogger.java:165) <==    Columns: shopId, goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-05 22:57:32 (BaseJdbcLogger.java:165) <==        Row: 1767050584, 小米1, 2, 999.00, chengjingming123
+TRACE [main] 2018-12-05 22:57:47 (BaseJdbcLogger.java:165) <==    Columns: shopId, goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-05 22:57:47 (BaseJdbcLogger.java:165) <==        Row: 1701953877, 小米2, 2, 1299.00, chengjingming123
+TRACE [main] 2018-12-05 22:58:01 (BaseJdbcLogger.java:165) <==    Columns: shopId, goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-05 22:58:01 (BaseJdbcLogger.java:165) <==        Row: 1701953877, 小米2, 2, 1299.00, chengjingming123
+TRACE [main] 2018-12-05 22:58:01 (BaseJdbcLogger.java:165) <==    Columns: goodsNumber*goodsPrice
+TRACE [main] 2018-12-05 22:58:01 (BaseJdbcLogger.java:165) <==        Row: 2598.00
+TRACE [main] 2018-12-05 22:58:01 (BaseJdbcLogger.java:165) <==    Columns: goodsId, goodsName, goodsPrice, goodsNumber, date, local
+TRACE [main] 2018-12-05 22:58:01 (BaseJdbcLogger.java:165) <==        Row: 2, 小米2, 1299.00, 50, 2018-12-04, Foxconn, Henan, China
+TRACE [main] 2018-12-05 22:58:01 (BaseJdbcLogger.java:165) <==    Columns: shopId, goodsName, goodsNumber, goodsPrice, userName
+TRACE [main] 2018-12-05 22:58:01 (BaseJdbcLogger.java:165) <==        Row: 1701953877, 小米2, 2, 1299.00, chengjingming123
+TRACE [main] 2018-12-05 22:58:25 (BaseJdbcLogger.java:165) <==    Columns: orderId, orderUserName, goodsName, orderPrice, goodsNumber, dateTime, orderState, iocationName, iocationPhone, iocation
+TRACE [main] 2018-12-05 22:58:25 (BaseJdbcLogger.java:165) <==        Row: 1016261986, chengjingming123, 小米1, 1998.00, 2, 2018-12-05 22:57:32.0, 已付款, 程井明, 15618816266, 昆山市玉山镇名仕大厦
+TRACE [main] 2018-12-05 22:58:25 (BaseJdbcLogger.java:165) <==        Row: 1361676285, chengjingming123, 小米2, 2598.00, 2, 2018-12-05 22:58:02.0, 已付款, 程井明, 15618816266, 昆山市玉山镇名仕大厦
+TRACE [main] 2018-12-05 22:58:25 (BaseJdbcLogger.java:165) <==        Row: 1876716114, chengjingming123, 三星S9, 3699.00, 1, 2018-12-05 22:54:06.0, 取消订单, 程井明, 15618816266, 昆山市玉山镇名仕大厦
+TRACE [main] 2018-12-05 23:38:11 (BaseJdbcLogger.java:165) <==    Columns: count(*)
+TRACE [main] 2018-12-05 23:38:11 (BaseJdbcLogger.java:165) <==        Row: 1
+TRACE [main] 2018-12-05 23:38:12 (BaseJdbcLogger.java:165) <==    Columns: userId, userName, passWord, userMoney
+TRACE [main] 2018-12-05 23:38:12 (BaseJdbcLogger.java:165) <==        Row: 526381897, chengjingming123, cjm123456, 100000.00
+TRACE [main] 2018-12-05 23:58:48 (BaseJdbcLogger.java:165) <==    Columns: count(*)
+TRACE [main] 2018-12-05 23:58:48 (BaseJdbcLogger.java:165) <==        Row: 1
+TRACE [main] 2018-12-05 23:58:48 (BaseJdbcLogger.java:165) <==    Columns: userId, userName, passWord, userMoney
+TRACE [main] 2018-12-05 23:58:48 (BaseJdbcLogger.java:165) <==        Row: 526381897, chengjingming123, cjm123456, 100000.00

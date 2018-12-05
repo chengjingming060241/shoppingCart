@@ -92,9 +92,10 @@ public class orderRealoze {
         this.orderMapper.addOrder(order);
         //添加成功后删除购物车对象
         shopCartRealize.purchaseGoodsMapper.deleteGoods(orderGoodsName,user.getUserName());
+        //倒计时开启
         int threadSize =10;
             ScheduledExecutorService service = Executors.newScheduledThreadPool(threadSize);
-            service.schedule(new Run(this.order.getOrderId(),user.getUserName()),1, TimeUnit.MINUTES);
+            service.schedule(new Run(this.order.getOrderId(),user.getUserName()),3, TimeUnit.MINUTES);
 
         }else {
             System.out.println("购物车空空如也，快去买买买吧！");
@@ -188,24 +189,31 @@ public class orderRealoze {
     //订单界面
     public void userOrder(User user){
         shoppingCart shoppingCart = new shoppingCart();
-        System.out.println("1、查询订单 \t 2、取消订单 \t 3、查看购买记录 0、返回上一级");
-        switch (sc.nextInt()){
-            case 1:
-                getAllOrder(user);
-                break;
-            case 2:
-                deleteOrder(user);
-                break;
-            case 3:
-                getPaymentRecord(user);
-            case 0:
-               shoppingCart.shoppingGoods(user);
-               break;
+        for (int i = 0; i <1 ; i++) {
+            System.out.println("1、查询订单 \t 2、取消订单 \t 3、查看购买记录 0、返回上一级");
+            String num = sc.next();
+            if (num.matches("[0-3]")){
+                switch (num){
+                    case "1":
+                        getAllOrder(user);
+                        break;
+                    case "2":
+                        deleteOrder(user);
+                        break;
+                    case "3":
+                        getPaymentRecord(user);
+                    case "0":
+                        shoppingCart.shoppingGoods(user);
+                        break;
+                }
+            }else {
+                System.out.println("0·3选择功能");
+                i--;
+            }
         }
+
+
     }
-
-
-
 
     //返回订单界面
     private void back(User user){

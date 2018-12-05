@@ -43,11 +43,26 @@ public class iocationRealize {
     private void addIocation(User user){
         System.out.println("输入联系人姓名：");
         iocation.setIocationName(sc.next());
-        System.out.println("新的手机号：");
-        iocation.setIocationPhone(sc.next());
-        System.out.println("新地址");
-        iocation.setIocation(sc.next());
-        //System.out.println("输入用户姓名：");
+        for (int i = 0; i <1 ; i++) {
+            System.out.println("新的手机号：");
+            String phone = sc.next();
+            if (phone.matches("1[34578]\\d{9}")){
+                iocation.setIocationPhone(phone);
+            }else {
+                System.out.println("不符合格式");
+                i--;
+            }
+        }
+        for (int i = 0; i <1 ; i++) {
+            System.out.println("新地址");
+            String iocation1 = sc.next();
+            if (iocation1.matches("[\\u4e00-\\u9fa5]\\w+")){
+                iocation.setIocation(iocation1);
+            }else {
+                System.out.println("不符合格式");
+                i--;
+            }
+        }
         iocation.setUserName(user.getUserName());
         iocationMapper.addIocation(iocation);
         System.out.println("添加地址成功");
@@ -67,23 +82,33 @@ public class iocationRealize {
     //地址界面
     public void shoppingIocation(User user){
         shoppingCart shoppingCart = new shoppingCart();
-        System.out.println("1、查看所有地址\t 2、修改地址 \t 3、添加新地址 \t 4、删除地址 \t 0、返回上一级");
-        switch (sc.nextInt()){
-            case 1:
-                getIocation(user);
-                break;
-            case 2:
-                updateIocation(user);
-                break;
-            case 3:
-                addIocation(user);
-                break;
-            case 4:
-                deleteIocation(user);
-                break;
-            case 0:
-                shoppingCart.shoppingGoods(user);
+        for (int i = 0; i <1 ; i++) {
+            System.out.println("1、查看所有地址\t 2、修改地址 \t 3、添加新地址 \t 4、删除地址 \t 0、返回上一级");
+            String num = sc.next();
+            if (num.matches("[0-4]")){
+                switch (num){
+                    case "1":
+                        getIocation(user);
+                        break;
+                    case "2":
+                        updateIocation(user);
+                        break;
+                    case "3":
+                        addIocation(user);
+                        break;
+                    case "4":
+                        deleteIocation(user);
+                        break;
+                    case "0":
+                        shoppingCart.shoppingGoods(user);
+                }
+            }else {
+                System.out.println(" 瞎 啊，请输入0·4选择相应功能！");
+                i++;
+            }
         }
+
+
     }
 
     //返回地址界面的方法
