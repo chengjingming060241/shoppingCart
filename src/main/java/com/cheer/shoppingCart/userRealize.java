@@ -86,8 +86,9 @@ public class userRealize extends AbstractMapper {
             if (money<=0){
                 System.out.println("充值金额最小为“1元”,是否继续充值y/n");
                 continue;
-            }else {
-                user.setUserMoney(money);
+            } else {
+                double userMoney = this.userMapper.getMoney(user.getUserName()) + money;
+                user.setUserMoney(userMoney);
                 user.setUserName(user.getUserName());
                 this.userMapper.updateMoney(user);
             }

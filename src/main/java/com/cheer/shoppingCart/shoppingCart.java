@@ -13,7 +13,6 @@ public class shoppingCart {
     public static void main(String[] args) {
         shoppingCart shoppingCart = new shoppingCart();
         shoppingCart.home();
-
     }
 
     //登录界面

@@ -7,7 +7,7 @@
     <!-- id是方法名 #{id}是方法参数parameterType -->
 
     <select id="getOrder" resultType="Order">
-   select * from `order` where goodsName = #{goodsName}
+   select * from `order` where orderId = #{orderId} and orderUserName = #{orderUserName}
     </select>
 
     <select id="getAllOrder" resultMap="orderResult">
@@ -18,6 +18,7 @@
 		`order`.orderPrice AS orderPrice,
 		`order`.goodsNumber AS goodsNumber,
 		`order`.dateTime AS dateTime,
+		`order`.orderState AS orderState,
 		iocation.iocationName AS iocationName,
 		iocation.iocationPhone AS iocationPhone,
 		iocation.iocation AS iocation
@@ -29,25 +30,78 @@
 		AND iocation.iocationId = `order`.iocationId
     </select>
 
-    <resultMap id="orderResult" type="Iocation">
-        <association property="iocation" resultMap="iocationResult"></association>
+    <resultMap id="orderResult" type="Order">
+		<id property="orderId" column="orderId"></id>
+		<result property="orderUserName" column="orderUserName"></result>
+		<result property="goodsName" column="goodsName"></result>
+		<result property="goodsPrice" column="orderPrice"></result>
+		<result property="iocationId" column="iocationId"></result>
+		<result property="goodsNumber" column="goodsNumber"></result>
+		<result property="dateTime" column="dateTime"></result>
+		<result property="orderState" column="orderState"></result>
+        <association property="iocation" javaType="Iocation">
+			<result property="iocationName" column="iocationName"></result>
+			<result property="iocationPhone" column="iocationPhone"></result>
+			<result property="iocation" column="iocation"></result>
+		</association>
     </resultMap>
 
-    <resultMap id="iocationResult" type="Iocation">
-        <result property= "iocationId" column="iocationId"></result>
-    </resultMap>
 
     <insert id="addOrder" >
-        insert into `order` values (#{orderId},#{goodsName},#{goodsNumber},#{goodsPrice},#{iocationId},#{dateTime},#{orderUserName})
+        insert into `order` values (#{orderId},#{goodsName},#{goodsNumber},#{goodsPrice},#{iocationId},#{dateTime},#{orderUserName},#{orderState})
     </insert>
 
     <delete id="deleteOrder">
-        delete from `order` where orderUserName = #{orderUserName} and orderId = #{orderId}
+        delete from `order` where orderUserName = #{orderUserName} and goodsName = #{goodsName}
     </delete>
 
     <select id="getOrderPrice" resultType="Double" >
-        select orderPrice*goodsNumber from `order` where goodsName = #{goodsName}
+        select orderPrice*goodsNumber from `order` where orderId = #{orderId} and orderUserName = #{orderUserName}
     </select>
+
+    <update id="updateOrderState">
+        update `order` set orderState = #{orderState} where orderId = #{orderId} and orderUserName = #{orderUserName}
+    </update>
+
+	<select id="getPaymentRecord" resultMap="orderResult1">
+ 	SELECT
+		`order`.orderId AS orderId,
+		`order`.orderUserName AS orderUserName,
+		`order`.goodsName AS goodsName,
+		`order`.orderPrice AS orderPrice,
+		`order`.goodsNumber AS goodsNumber,
+		`order`.dateTime AS dateTime,
+		`order`.orderState AS orderState,
+		iocation.iocationName AS iocationName,
+		iocation.iocationPhone AS iocationPhone,
+		iocation.iocation AS iocation
+	FROM
+		`order`
+		JOIN iocation ON ( `order`.iocationId = iocation.iocationId )
+	WHERE
+		orderUserName = #{orderUserName}
+		AND
+		orderState = #{orderState}
+		AND iocation.iocationId = `order`.iocationId
+    </select>
+
+	<resultMap id="orderResult1" type="Order">
+		<id property="orderId" column="orderId"></id>
+		<result property="orderUserName" column="orderUserName"></result>
+		<result property="goodsName" column="goodsName"></result>
+		<result property="goodsPrice" column="orderPrice"></result>
+		<result property="iocationId" column="iocationId"></result>
+		<result property="goodsNumber" column="goodsNumber"></result>
+		<result property="dateTime" column="dateTime"></result>
+		<result property="orderState" column="orderState"></result>
+		<association property="iocation" javaType="Iocation">
+			<result property="iocationName" column="iocationName"></result>
+			<result property="iocationPhone" column="iocationPhone"></result>
+			<result property="iocation" column="iocation"></result>
+		</association>
+	</resultMap>
+
+
 
 
 </mapper>

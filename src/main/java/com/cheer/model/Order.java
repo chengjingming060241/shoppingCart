@@ -10,7 +10,16 @@ public class Order {
     private int iocationId;
     private Date dateTime;
     private String orderUserName;
-    private Iocation iocat;
+    private Iocation iocation;
+    private String orderState;
+
+    public String getOrderState() {
+        return orderState;
+    }
+
+    public void setOrderState(String orderState) {
+        this.orderState = orderState;
+    }
 
     public int getOrderId() {
         return orderId;
@@ -69,11 +78,11 @@ public class Order {
     }
 
     public Iocation getIocat() {
-        return iocat;
+        return iocation;
     }
 
     public void setIocat(Iocation iocat) {
-        this.iocat = iocat;
+        this.iocation = iocat;
     }
 
     @Override
@@ -86,7 +95,8 @@ public class Order {
         sb.append(", iocationId=").append(iocationId);
         sb.append(", dateTime=").append(dateTime);
         sb.append(", orderUserName='").append(orderUserName).append('\'');
-        sb.append(", iocat=").append(iocat);
+        sb.append(", iocat=").append(iocation);
+        sb.append(", orderState='").append(orderState).append('\'');
         sb.append('}');
         return sb.toString();
     }
