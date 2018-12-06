@@ -68,6 +68,7 @@ public class userRealize extends AbstractMapper {
         }while (sc.next().equals("y"));
 
     }
+
         //修改密码的方法
         public void updatePassword (User user){
             for (int i = 3; i >= 1; i--) {

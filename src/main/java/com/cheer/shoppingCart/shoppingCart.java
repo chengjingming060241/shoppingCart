@@ -21,7 +21,7 @@ public class shoppingCart {
             System.out.println("-----------欢迎来到其然购物中心--------------");
             System.out.println("\n1、登录 \t\t\t 2、注册账号");
             String num = sc.next();
-            if (num.matches("[0-1]")){
+            if (num.matches("[1-2]")){
                 switch (num){
                     case "1" :
                         this.userRealize.Login();

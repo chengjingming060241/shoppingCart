@@ -18,6 +18,7 @@ public class Run implements Runnable {
     public void run() {
         this.orderMapper.updateOrderState("取消订单",getOrderId(),getUserName());
         System.out.println("订单取消了！！！");
+
         shoppingCart shoppingCart = new shoppingCart();
         User user = new User();
         shoppingCart.shoppingGoods(user);

@@ -35,19 +35,27 @@ public class ShopCartRealize {
         for (ShopCart s:shopCartList) {
             System.out.println(s);
         }
-
-        System.out.println("返回上一级请按“0”，直接购买请按“1”，下单请按“2”");
-        switch (sc.nextInt()){
-            case 1:
-               pay(user);
-                break;
-            case 2:
-                orderRealoze.addOrder(user);
-            case 0:
-                //返回上一级
-                back(user);
-                break;
+        for (int i = 0; i <1 ; i++) {
+            System.out.println("返回上一级请按“0”，直接购买请按“1”，下单请按“2”");
+            String num = sc.next();
+            if (num.matches("[0-2]")){
+                switch (num){
+                    case "1":
+                        pay(user);
+                        break;
+                    case "2":
+                        orderRealoze.addOrder(user);
+                        break;
+                    case "0":
+                      shoppingCart(user);
+                        break;
+                }
+            }else {
+                System.out.println("0·2选择相应功能");
+                i--;
+            }
         }
+
     }
 
     //修改购物车商品数量

@@ -2174,3 +2174,7 @@ TRACE [main] 2018-12-05 23:58:48 (BaseJdbcLogger.java:165) <==    Columns: count
 TRACE [main] 2018-12-05 23:58:48 (BaseJdbcLogger.java:165) <==        Row: 1
 TRACE [main] 2018-12-05 23:58:48 (BaseJdbcLogger.java:165) <==    Columns: userId, userName, passWord, userMoney
 TRACE [main] 2018-12-05 23:58:48 (BaseJdbcLogger.java:165) <==        Row: 526381897, chengjingming123, cjm123456, 100000.00
+TRACE [main] 2018-12-06 09:38:09 (BaseJdbcLogger.java:165) <==    Columns: count(*)
+TRACE [main] 2018-12-06 09:38:09 (BaseJdbcLogger.java:165) <==        Row: 1
+TRACE [main] 2018-12-06 09:38:09 (BaseJdbcLogger.java:165) <==    Columns: userId, userName, passWord, userMoney
+TRACE [main] 2018-12-06 09:38:09 (BaseJdbcLogger.java:165) <==        Row: 526381897, chengjingming123, cjm123456, 100000.00

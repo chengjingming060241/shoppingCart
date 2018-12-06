@@ -30,7 +30,6 @@ public class orderRealoze {
 
     //获取全部订单
     private void getAllOrder(User user){
-
         List<Order> mapList = this.orderMapper.getAllOrder(user.getUserName());
         System.out.println("-----------------目前的订单------------------");
         for (Order order:mapList) {
@@ -38,15 +37,22 @@ public class orderRealoze {
         }
         System.out.println("-----------------目前的订单------------------");
         System.out.println("返回上一级请按“0”，付款请按“1”");
-        switch (sc.nextInt()){
-            case 1:
-                pay(user);
-                break;
-            case 0:
-                back(user);  //返回订单界面
-                break;
+        for (int i = 0; i <1 ; i++) {
+            String num = sc.next();
+            if (num.matches("[0-1]")){
+                switch (num){
+                    case "1":
+                        pay(user);
+                        break;
+                    case "2":
+                        userOrder(user);
+                        break;
+                }
+            }else {
+                System.out.println("0·1选择相应功能");
+                i--;
+            }
         }
-
     }
 
     ////获取购买记录
@@ -96,7 +102,14 @@ public class orderRealoze {
         int threadSize =10;
             ScheduledExecutorService service = Executors.newScheduledThreadPool(threadSize);
             service.schedule(new Run(this.order.getOrderId(),user.getUserName()),3, TimeUnit.MINUTES);
-
+//            try {
+//                //主线程休眠
+//                Thread.sleep(1000*5);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            //关闭线程
+//            service.shutdown();
         }else {
             System.out.println("购物车空空如也，快去买买买吧！");
         }
